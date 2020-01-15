@@ -1,5 +1,5 @@
 {
-    "name": "mink/driver-testsuite",
+    "name": "friends-of-behat/mink-driver-testsuite",
     "description": "Functional testsuite for Mink drivers",
     "homepage": "http://mink.behat.org/",
     "type": "library",
@@ -18,12 +18,18 @@
     ],
 
     "require": {
-        "php": ">=5.3",
-        "behat/mink":  "~1.7",
-        "symfony/phpunit-bridge": "^4.2"
+        "php": "^7.2",
+        "behat/mink":  "^1.7",
+        "symfony/phpunit-bridge": "^4.4|^5.0"
     },
+
     "require-dev": {
-        "symfony/http-kernel": "^2.7 || ^3.2 || ^4.0"
+        "symfony/http-kernel": "^4.4|^5.0",
+        "phpunit/phpunit": "^8.5"
+    },
+
+    "replace": {
+        "mink/driver-testsuite": "self.version"
     },
 
     "bin": [
