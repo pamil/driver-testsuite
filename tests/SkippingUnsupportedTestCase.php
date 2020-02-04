@@ -19,7 +19,7 @@ if (class_exists('PHPUnit\Runner\Version') && version_compare(Version::id(), '6.
     {
         protected function onNotSuccessfulTest(\Throwable $e)
         {
-            if ($e instanceof eUnsupportedDriverActionException) {
+            if ($e instanceof UnsupportedDriverActionException) {
                 $this->markTestSkipped($e->getMessage());
             }
 
